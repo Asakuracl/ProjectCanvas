@@ -2,8 +2,11 @@ class myCanvas {
     
     constructor(canvas) {
         this.canvas = canvas;
+        this.ctx = canvas.getContext('2d')
+        canvas.width = "500";
+        canvas.height = "500";
 
-
+        console.log(canvas)
         // this.image = image;
         // this.variable = 0;
         // this.dist = -100;
