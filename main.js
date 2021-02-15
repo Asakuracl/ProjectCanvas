@@ -2,11 +2,22 @@ class myCanvas {
     
     constructor(canvas) {
         this.canvas = canvas;
-        this.ctx = canvas.getContext('2d')
+        this.ctx = canvas.getContext('2d');
         canvas.width = "500";
         canvas.height = "500";
+        
+        this.moveX = 50;
+        this.moveY = 50;
 
-        console.log(canvas)
+        this.ctx.beginPath();
+        this.ctx.moveTo(50,50);
+        this.ctx.lineTo(65,60);
+        this.ctx.lineTo(65,40);
+        this.ctx.closePath()
+        this.ctx.lineWidth = 1;
+        this.ctx.strokeStyle = '#0f4c81';
+        this.ctx.stroke();
+
         // this.image = image;
         // this.variable = 0;
         // this.dist = -100;
