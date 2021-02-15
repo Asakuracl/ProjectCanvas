@@ -9,11 +9,7 @@ class myCanvas {
         // this.moveY = Math.floor(Math.random() * canvas.height);
         this.moveX = 0;
         this.moveY = 10;
-        this.speed = 10
-    
-
-        //
-      
+        this.speed = 4;
 
         //listener on click bouton
         this.clickOnCanvas = document.querySelector("canvas");
@@ -36,7 +32,10 @@ class myCanvas {
         this.ctx.stroke();
 
         this.moveX += this.speed;
-        this.moveY += this.speed;
+        // this.moveY += this.speed;
+        (this.moveX + 20 > canvas.width || this.moveX < 0) ? this.speed = -this.speed : this.speed;
+   
+        
         // for (let i = 0; i < 50; i++) {
         //     this.moveX = Math.floor(Math.random() * canvas.width);
         //     this.moveY = Math.floor(Math.random() * canvas.height);
