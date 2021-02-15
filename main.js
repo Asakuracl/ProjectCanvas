@@ -33,8 +33,9 @@ class myCanvas {
         this.ctx.stroke();
 
         this.moveX += this.speed;
-        // this.moveY += this.speed;
+        this.moveY += this.speed;
         (this.moveX + this.triangleLength > canvas.width || this.moveX < 0) ? this.speed = -this.speed : this.speed;
+        (this.moveY + this.triangleLength > canvas.height || this.moveY < 0) ? this.speed = -this.speed : this.speed;
    
         
         // for (let i = 0; i < 50; i++) {
