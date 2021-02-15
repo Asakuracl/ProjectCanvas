@@ -6,18 +6,20 @@ class myCanvas {
         canvas.width = "500";
         canvas.height = "500";
         
-        this.moveX = 50;
-        this.moveY = 50;
+        for (let i = 0; i < 50; i++){
+            this.moveX = Math.floor(Math.random()*500);
+            this.moveY = Math.floor(Math.random()*500);
 
-        this.ctx.beginPath();
-        this.ctx.moveTo(50,50);
-        this.ctx.lineTo(65,60);
-        this.ctx.lineTo(65,40);
-        this.ctx.closePath()
-        this.ctx.lineWidth = 1;
-        this.ctx.strokeStyle = '#0f4c81';
-        this.ctx.stroke();
+            this.ctx.beginPath();
+            this.ctx.moveTo(0 + this.moveX, 10 + this.moveY);
+            this.ctx.lineTo(20 + this.moveX, 0 + this.moveY);
+            this.ctx.lineTo(20 + this.moveX, 20+ this.moveY);
 
+            this.ctx.closePath()
+            this.ctx.lineWidth = 1;
+            this.ctx.strokeStyle = '#0f4c81';
+            this.ctx.stroke();
+        }
         // this.image = image;
         // this.variable = 0;
         // this.dist = -100;
