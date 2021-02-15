@@ -9,6 +9,8 @@ class myCanvas {
         // this.moveY = Math.floor(Math.random() * canvas.height);
         this.moveX = 0;
         this.moveY = 10;
+        this.speed = 10
+    
 
         //
       
@@ -20,11 +22,9 @@ class myCanvas {
     }
     // event on click
     clickCanvasEffect(){
-        this.moveX += 1;
-        this.moveY += 1;
         requestAnimationFrame(this.clickCanvasEffect.bind(this));
         this.ctx.clearRect(0, 0, canvas.height, canvas.width);
-        
+
         this.ctx.beginPath();
         this.ctx.moveTo(0 + this.moveX, 10 + this.moveY);
         this.ctx.lineTo(20 + this.moveX, 0 + this.moveY);
@@ -35,6 +35,8 @@ class myCanvas {
         this.ctx.strokeStyle = '#0f4c81';
         this.ctx.stroke();
 
+        this.moveX += this.speed;
+        this.moveY += this.speed;
         // for (let i = 0; i < 50; i++) {
         //     this.moveX = Math.floor(Math.random() * canvas.width);
         //     this.moveY = Math.floor(Math.random() * canvas.height);
