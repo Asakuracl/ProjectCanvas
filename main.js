@@ -7,7 +7,8 @@ class myCanvas {
         canvas.height = "500";
         this.moveX = Math.floor(Math.random() * canvas.width);
         this.moveY = Math.floor(Math.random() * canvas.height);
-        this.speed = 1;
+        this.speedX = 1;
+        this.speedY = 1;
         this.triangleLength = 20;
 
         //listener on load
@@ -27,11 +28,11 @@ class myCanvas {
         this.ctx.strokeStyle = '#0f4c81';
         this.ctx.stroke();
 
-        (this.moveX + this.triangleLength > canvas.width || this.moveX < 0) ? this.speed = -this.speed: this.speed;
-        (this.moveY + this.triangleLength > canvas.height || this.moveY < 0) ? this.speed = -this.speed : this.speed;
+        (this.moveX + this.triangleLength > canvas.width || this.moveX < 0) ? this.speedX = -this.speedX: this.speedX;
+        (this.moveY + this.triangleLength > canvas.height || this.moveY < 0) ? this.speedY = -this.speedY : this.speedY;
    
-        this.moveX += this.speed;
-        this.moveY += this.speed;
+        this.moveX += this.speedX;
+        this.moveY += this.speedY;
 
     }
 
